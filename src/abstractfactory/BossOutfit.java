@@ -1,24 +1,26 @@
+package abstractfactory;
 
-public class AdidasOutfit extends Outfit {
+
+public class BossOutfit extends Outfit {
 
 	@Override
 	public String getJeans() {
-		return "Adidas-farkut";
+		return "Boss-farkut";
 	}
 
 	@Override
 	public String getShirt() {
-		return "Adidas-paita";
+		return "Boss-paita";
 	}
 
 	@Override
 	public String getCap() {
-		return "Adidas-lippis";
+		return "Boss-lippis";
 	}
 
 	@Override
 	public String getShoes() {
-		return "Adidas-kengät";
+		return "Boss-kengät";
 	}
 
 }

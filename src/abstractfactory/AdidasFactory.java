@@ -1,3 +1,4 @@
+package abstractfactory;
 
 public class AdidasFactory implements ClothesAbstractFactory {
 	

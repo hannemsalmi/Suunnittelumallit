@@ -1,3 +1,4 @@
+package abstractfactory;
 
 public abstract class Outfit {
 	
