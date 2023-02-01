@@ -14,12 +14,13 @@ public class Kotelo implements Laiteosa {
 	@Override
 	public void lisaaOsa(Laiteosa osa) {
 		osalista.add(osa);
-		this.hinta += osa.getHinta();
 	}
 
 	@Override
 	public double getHinta() {
+		for(Laiteosa l : osalista) {
+			this.hinta += l.getHinta();
+		}
 		return this.hinta;
 	}
-
 }
