@@ -1,9 +1,10 @@
 package singleton;
 
-public class Bosspaita {
+public class Bosspaita extends Paita {
+	private String nimi = "Boss-paita";
 	
-	public String getPaita(){
-		return "Boss-paita";
+	public String getNimi(){
+		return this.nimi;
 	}
 
 }

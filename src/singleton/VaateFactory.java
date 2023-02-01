@@ -2,6 +2,7 @@ package singleton;
 
 interface VaateFactory {
 	
-	Paita createPaita();
+	Paita luoPaita();
+	public int getLuodutPaidat();
 
 }

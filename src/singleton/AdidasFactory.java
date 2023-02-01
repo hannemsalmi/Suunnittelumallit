@@ -2,6 +2,7 @@ package singleton;
 
 public class AdidasFactory implements VaateFactory{
 	private static AdidasFactory INSTANCE = new AdidasFactory();
+	private int paitoja_luotu = 0;
 	
 	private AdidasFactory() {}
 	
@@ -10,7 +11,13 @@ public class AdidasFactory implements VaateFactory{
 	}
 	
 	@Override
-	public Paita createPaita() {
+	public Paita luoPaita() {
+		this.paitoja_luotu++;
 		return new Adidaspaita();
+	}
+	
+	
+	public int getLuodutPaidat() {
+		return this.paitoja_luotu;
 	}
 }
