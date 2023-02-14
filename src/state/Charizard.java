@@ -14,9 +14,8 @@ public class Charizard extends PokemonState {
 		System.out.println("Charizard attacks.");
 	};
 
-	void sleep(Pokemon p) {
+	void sleep() {
 		System.out.println("Charizard is sleeping.");
-		System.out.println("Charizard cannot evolve further!");
 	};
 
 	void eat() {

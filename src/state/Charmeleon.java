@@ -14,10 +14,8 @@ public class Charmeleon extends PokemonState {
 		System.out.println("Charmeleon attacks.");
 	};
 
-	void sleep(Pokemon p) {
+	void sleep() {
 		System.out.println("Charmeleon is sleeping.");
-		changeState(p, Charizard.getInstance());
-		System.out.println("Charmeleon evolved into Charizard!");
 	};
 
 	void eat() {
