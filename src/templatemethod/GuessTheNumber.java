@@ -13,7 +13,7 @@ public class GuessTheNumber extends Game {
 	 		System.out.println("Goal of this game is to guess a number between 1 and 20.");
 	 		number = (int) (Math.random() * 20) + 1;
 	 		guesses = new int[playersCount];
-	    }
+	 	}
 
 	 	@Override
 	 	void makePlay(int player) {
