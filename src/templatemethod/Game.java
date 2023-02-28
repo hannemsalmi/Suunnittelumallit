@@ -4,7 +4,7 @@ public abstract class Game {
 
 	protected int playersCount;
 	 
-    abstract void initializeGame();
+	abstract void initializeGame();
 
     abstract void makePlay(int player);
 
