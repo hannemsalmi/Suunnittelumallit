@@ -4,21 +4,23 @@ import java.util.Random;
 
 public class Asiakas implements Runnable {
     private final Arvuuttaja arvuuttaja;
+    private int pelaajaNumero;
+    private static int nextPelaajaNumero = 1;
+    private Object memento;
 
     public Asiakas(Arvuuttaja arvuuttaja) {
         this.arvuuttaja = arvuuttaja;
+        this.pelaajaNumero = nextPelaajaNumero;
+        nextPelaajaNumero++;
     }
 
-    @Override
     public void run() {
-        Memento memento = arvuuttaja.liityPeliin();
-        int arvaus = arvaus();
-        System.out.println("Asiakas arvaa " + arvaus);
-        while (!arvuuttaja.arvaa(memento, arvaus)) {
+        memento = arvuuttaja.liityPeliin(pelaajaNumero);
+        System.out.println("Asiakas " + pelaajaNumero + " liittyi peliin.");
+        int arvaus;
+        do {
             arvaus = arvaus();
-            System.out.println("Asiakas arvaa " + arvaus);
-            
-        }
+        } while (!arvuuttaja.arvaa(memento, arvaus));
     }
 
     private int arvaus() {
