@@ -1,7 +1,7 @@
 package facade;
 
 public class HardDrive {
-    public char[] Read(long lba, int size) {
+    public char[] read(long lba, int size) {
         System.out.println("Reading " + size + " characters from hard drive at LBA " + lba);
         char[] data = new char[size];
         

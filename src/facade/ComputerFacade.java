@@ -16,10 +16,10 @@ public class ComputerFacade {
     }
 
     public void start() {
-        cpu.Freeze();
-        char[] data = harddrive.Read(kBootSector, kSectorSize);
-        memory.Load(kBootAddress, data);
-        cpu.Jump(kBootAddress);
-        cpu.Execute();
+        cpu.freeze();
+        char[] data = harddrive.read(kBootSector, kSectorSize);
+        memory.load(kBootAddress, data);
+        cpu.jump(kBootAddress);
+        cpu.execute();
     }
 }
